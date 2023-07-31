@@ -23,21 +23,18 @@ public class Language {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date updatedAt;
+    private Date updatedAd;
 
     public Language() {
     }
 
     public Language(String name,
                     String creator,
-                    String currentVersion,
-                    Date createdAt,
-                    Date updatedAt) {
+                    String currentVersion
+                    ) {
         this.name = name;
         this.creator = creator;
         this.currentVersion = currentVersion;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
     }
 
     public Long getId() {
@@ -86,6 +83,6 @@ public class Language {
     }
     @PreUpdate
     protected void onUpdate(){
-        this.updatedAt = new Date();
+        this.updatedAd = new Date();
     }
 }

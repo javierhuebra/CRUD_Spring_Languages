@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="/languagesScript.js" defer ></script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <title>Languages</title>
+</head>
+<body>
+<h1>Lista de lenguajes</h1>
+<div id="tabla"></div>
+<div class="cont-form">
+    <form id="form_cargar" action="/languages" method="post">
+        <input type="text" placeholder="nombre" id="name" name="name">
+        <input type="text" placeholder="creador" id="creator" name="creator">
+        <input type="text" placeholder="version" id="currentVersion" name="currentVersion">
+        <input type="submit" value="Cargar Lenguaje">
+    </form>
+</div>
+</body>
+</html>

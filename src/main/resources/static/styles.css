@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#tabla{
+    width: 50vw;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+
+}
+.fila{
+    display: flex;
+
+}
+.columna{
+    flex: 1;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+}
+.titular{
+    background-color: cornflowerblue;
+}
+.container-detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.dash{
+    font-size: 25px;
+}

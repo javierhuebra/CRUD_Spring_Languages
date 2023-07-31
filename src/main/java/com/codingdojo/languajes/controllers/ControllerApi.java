@@ -15,19 +15,22 @@ public class ControllerApi {
     }
 
     //1 - GET para todos los lenguajes
-    @GetMapping("/languages")
+    @GetMapping("/api/languages")
     public List<Language> index(){
         return languageService.allLanguages();
     }
 
     //2 - POST para cargar lenguajes
     @PostMapping("/languages")
-    public Language create(@RequestBody Language language){
-        return  languageService.createLanguage(language);
+    public Language create(@RequestParam("name") String name,
+                           @RequestParam("creator") String creator,
+                           @RequestParam("currentVersion") String currentVersion){
+        Language lenguaje = new Language(name,creator,currentVersion);
+        return  languageService.createLanguage(lenguaje);
     }
 
     //3 - GET para un lenguaje
-    @GetMapping("/languages/{id}")
+    @GetMapping("/api/languages/{id}")
     public Language buscar(@PathVariable("id") Long id){
         return languageService.findLanguage(id);
     }
