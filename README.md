@@ -5,7 +5,9 @@ con javascript para lograr entrenar el manejo del
 front y poder escalar mis creaciones en algo mas generalizado.
 
 <img src="Captura1.PNG">
+<img src="Captura4.PNG">
 <img src="Captura2.PNG">
+<img src="Captura5.PNG">
 
 ### Características
 - Crear registros
