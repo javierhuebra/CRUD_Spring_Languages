@@ -97,7 +97,7 @@ form?.addEventListener("submit",(e) => {
 //Funcion para eliminar registro
 const eliminarRegistro = (id) => {
     const requestOptions = {
-        method: 'DELETE' //ATENTO, esta funcion method no admite las comillas `` solo '' o ""(de las ultimas no estoy seguro)
+        method: 'DELETE' //ATENTO, esta funcion method no admite las comillas `` solo '' o ""
     };
 
     fetch(`/languages/${id}`, requestOptions)

@@ -23,8 +23,20 @@ const peticionGetEditar = async () => {
     }
 }
 
-form.addEventListener("submit", () => {
-
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    if(form.name.value.length < 2 || form.name.value.length > 20){
+        alert("Nombre debe ser mayor a 2 caracteres y menor a 20")
+        return
+    }
+    if(form.creator.value.length < 2 || form.creator.value.length > 20){
+        alert("Creador debe ser mayor a 2 caracteres y menor a 20")
+        return
+    }
+    if(form.currentVersion.value.length < 2 || form.currentVersion.value.length > 20){
+        alert("La version debe ser mayor a 2 caracteres y menor a 20")
+        return
+    }
     const url = `/languages/${numero}`
     const data = {
         name: form.name.value,
@@ -43,7 +55,8 @@ form.addEventListener("submit", () => {
         .then(response => response.json())
         .then(data => {
             console.log('Respuesta del servidor:', data);
+            window.location.href = '/languages'
         })
-    window.location.href = '/languages'
+
 })
 peticionGetEditar()

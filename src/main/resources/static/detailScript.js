@@ -29,8 +29,10 @@ const hacerPeticionDetail = async () => {
 }
 
 document.getElementById("btn_eliminar").addEventListener("click",() =>{
-    console.log("aasda")
-    eliminarRegistro(numero)
+    const quiereEliminar = window.confirm("¿Desea eliminar el registro "+ numero + "?")
+
+    quiereEliminar && eliminarRegistro(numero)
+
 })
 
 hacerPeticionDetail()
